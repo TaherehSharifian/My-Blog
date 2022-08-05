@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+404 - Not found
+{% endblock title %} 
+
+
+{% block content %}
+<h2>We're Sorry!</h2>
+<p>The you are looking for does NOT exist. Please continuew from <a href="{% url 'starting-page' %}">Home</a> page </p>
+{% endblock content %}
