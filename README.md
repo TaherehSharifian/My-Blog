@@ -4,7 +4,7 @@ A Django blog with database and login/register functionality
 
 An ongoing project which gets compeleted setp-by-step
 
-So far...
+### So far...
 
 This blog can interact with database and read data from it.
 
@@ -15,7 +15,7 @@ To start this project:
 
 2- Clone it on your system
 
-3- No special packages need to be installed
+3- You need to install the `pillow` package in order to upload images to the dataset (you can install this package with `pip -m install pillow`)
 
 4- Run the following codes in your terminal (if on VSCode, the address is already this project folder but if in windows terminal, you should dive into this project folder first)
 
