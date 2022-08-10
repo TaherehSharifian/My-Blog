@@ -11,6 +11,10 @@ class PostAdmin(admin.ModelAdmin):
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name')
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('user_name', 'post')
+
 admin.site.register(models.Post, PostAdmin)
 admin.site.register(models.Author, AuthorAdmin)
 admin.site.register(models.Tag)
+admin.site.register(models.Comment, CommentAdmin)

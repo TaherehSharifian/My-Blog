@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -23,7 +22,7 @@ class Author(models.Model):
 class Post(models.Model):
     slug = models.SlugField(unique=True, db_index=True)
     title = models.CharField(max_length=200)
-    image = models.CharField(max_length=100, null=True, blank=True)
+    image = models.ImageField(upload_to='post-images', null=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name='posts')
     tags = models.ManyToManyField(Tag)
     date = models.DateField(auto_now=True)
@@ -33,3 +32,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    user_name = models.CharField(max_length=100)
+    user_email = models.EmailField()
+    comment = models.TextField(max_length=400)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return f'{self.username} - {self.post.title}'
