@@ -7,6 +7,7 @@ An ongoing project which gets compeleted setp-by-step
 ### So far...
 
 This blog can interact with database and read data from it.
+Also leaving comment for each post in available. 
 
 
 To start this project:
